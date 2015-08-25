@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head lang="UTF-8">
+    <title>User Homepage</title>
+    <link rel="stylesheet" href="/assets/styles/style.css">
+</head>
+<body>
+    <header>
+        <div class="navBar">
+            <ul>
+                <li><a href="#search">SEARCH</a></li>
+                <li><a href="#addhh">ADD</a></li>
+                <li><a href="#results">RESULTS</a></li>
+            </ul>
+        </div>
+        <hr>
+    </header>
+    <div>
+        <main ng-view></main>
+    </div>
+    <footer>
+        <hr>
+        <ul>
+            <li></li>
+        </ul>
+
+        <ul>
+            <li>Email the admin</li>
+            <li><a href="https://www.linkedin.com/pub/paul-r-stafki/b8/54a/207">Site Admin linkedin</a></li>
+        </ul>
+    </footer>
+<script type="text/javascript" src="/vendors/angular/angular.min.js"></script>
+<script type="text/javascript" src="/vendors/angular-route/angular-route.min.js"></script>
+<script type="text/javascript" src="/assets/scripts/app.min.js"></script>
+<script type="text/javascript" src="/assets/scripts/controllers/controller.min.js"></script>
+</body>
+</html>
