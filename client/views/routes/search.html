@@ -1,12 +1,14 @@
-<form action="/" method="post">
-    <div>
-        <label for="zipcode">zip code:</label>
-        <input type="text" name="zipcode" id="zipcode"/>
-    </div>
-    <div>
-        <input type="submit" value="Search"/>
-    </div>
-</form>
+<div>
+    <form action="/happyhour" method="get">
+        <div>
+            <label for="zipcode">zip code:</label>
+            <input type="text" name="zipcode" id="zipcode"/>
+        </div>
+        <div>
+            <button ng-click="getEstablishments()"><a href="#results">Button</a></button>
+        </div>
+    </form>
 
-<a href="#addhh">Stumble on a great Happy Hour? Add it here!</a>
-<a href="#">Owner or Operator? Add your establishment here!</a>
+
+    <a href="#addhh">Stumble on a great Happy Hour? Add it here!</a>
+</div>

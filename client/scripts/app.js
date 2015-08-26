@@ -6,15 +6,15 @@ myApp.config(['$routeProvider', function($routeProvider){
     $routeProvider.
         when('/search', {
             templateUrl: "/assets/views/routes/search.html",
-            controller: "SomeController"
+            controller: "EstablishmentController"
         }).
         when('/addhh', {
             templateUrl: "/assets/views/routes/addhh.html",
-            controller: "SomeController"
+            controller: "AnotherController"
         }).
         when('/results', {
             templateUrl: "/assets/views/routes/results.html",
-            controller: "AnotherController"
+            controller: "EstablishmentController"
         }).
         otherwise({
             redirectTo: "/search"

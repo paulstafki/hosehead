@@ -1,2 +1,14 @@
-<p>RESULTS</p>
-<p>SO MANY RESULTS</p>
+<div>
+    <div class="well">
+        <h1>Das Resultos</h1>
+    </div>
+    <div class="container" class="well">
+        <ul ng-repeat="note in establishments">
+            <li>{{note.name}}</li>
+                <p>{{note.time}}</p><p>{{note.deals}}</p>
+                <p>{{note.city}}</p><p>{{note.phonenumber}}</p>
+                <p>Added on: {{note.date}}</p>
+
+        </ul>
+    </div>
+</div>

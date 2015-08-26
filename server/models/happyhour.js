@@ -9,7 +9,9 @@ var EstablishmentSchema = new Schema({
     city: { type: String, required: true },
     zipcode: { type: Number, required: true },
     deals: { type: String, required: true },
-    focus: { type: String, required: true }
+    focus: { type: String, required: true },
+    flag: { type: Boolean, default: true },
+    date: { type: Date, default: Date.now }
 });
 
 module.exports = mongoose.model('Establishment', EstablishmentSchema);
