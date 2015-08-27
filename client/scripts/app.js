@@ -10,7 +10,7 @@ myApp.config(['$routeProvider', function($routeProvider){
         }).
         when('/addhh', {
             templateUrl: "/assets/views/routes/addhh.html",
-            controller: "AnotherController"
+            controller: "AddhappyhourController"
         }).
         when('/results', {
             templateUrl: "/assets/views/routes/results.html",

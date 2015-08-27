@@ -1,3 +1,17 @@
 body {
     background-color: #FFFFFF;
 }
+
+li {
+    list-style-type: none;
+}
+
+.resultsDiv li, .resultsHeader li{
+    display: inline;
+}
+
+.resultsHeader li {
+    font: 20px Serif;
+    text-decoration:underline;
+}
+

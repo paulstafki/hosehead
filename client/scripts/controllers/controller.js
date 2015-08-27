@@ -1,6 +1,7 @@
-myApp.controller('AnotherController', ["$scope", function($scope){
-    $scope.thing = "There you are!";
-    console.log("Another Controller");
+myApp.controller('AddhappyhourController', ["$scope", function($scope){
+    //$scope.empAdded = {
+    //    value : 'NO'
+    //};
 }]);
 
 myApp.controller("EstablishmentController", ['$scope', '$http', 'EstablishmentService', function($scope, $http, EstablishmentService){
@@ -9,7 +10,7 @@ myApp.controller("EstablishmentController", ['$scope', '$http', 'EstablishmentSe
     $scope.getEstablishments = function(){
         EstablishmentService.getHappyHours($scope.zipcode);
         console.log($scope.zipcode);
-        console.log($scope.establishments);
+        //console.log($scope.establishments);
     };
 }]);
 
@@ -19,12 +20,13 @@ myApp.factory('EstablishmentService', ['$http', function($http){
         establishments : []         //array contains data object
     };
     return {
-        getHappyHours : function(data){
-            console.log(data);          //functioned designed to allow passing in of zipcode
-            return $http.post('/happyhour/' + data).then(function(response){      //retrieves establishments
-                console.log(response);
-                return data.establishments = response.data;
-                console.log(establishments);
+        getHappyHours : function(param){
+            console.log(param);          //functioned designed to allow passing in of zip code
+            $http.post('/happyhour/' + param).then(function(response){      //retrieves establishments
+                //console.log(response);        console logs no longer needed
+                data.establishments = response.data;
+                //console.log(data.establishments);
+                //return data.establishments       doesn't need to return anything anymore
             })
         },
         data : data

@@ -16,7 +16,6 @@ router.post("/happyhour/:zipcode", function(req, res, next){
     //var reqZipcode = req.params.zipcode; undid an unneccesary variable declaration
     return Establishment.find({zipcode: req.params.zipcode}).exec(function(err, info){
         if (err) throw new Error(err);
-        console.log("Here is the info: " + info);
         res.send(JSON.stringify(info));
     });
 });
