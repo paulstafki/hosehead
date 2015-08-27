@@ -5,9 +5,18 @@ var path = require('path');
 var mongoose = require('mongoose');
 var Establishment = require('../models/happyhour');
 
-router.get("/happyhour", function(req, res, next){
-    return Establishment.find({}).exec(function(err, info){
+//router.get("/happyhour", function(req, res, next){
+//    return Establishment.find({}).exec(function(err, info){
+//        if (err) throw new Error(err);
+//        res.send(JSON.stringify(info));
+//    });
+//});
+
+router.post("/happyhour/:zipcode", function(req, res, next){
+    //var reqZipcode = req.params.zipcode; undid an unneccesary variable declaration
+    return Establishment.find({zipcode: req.params.zipcode}).exec(function(err, info){
         if (err) throw new Error(err);
+        console.log("Here is the info: " + info);
         res.send(JSON.stringify(info));
     });
 });

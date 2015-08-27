@@ -7,7 +7,8 @@ myApp.controller("EstablishmentController", ['$scope', '$http', 'EstablishmentSe
     $scope.establishment = {};
     $scope.establishments = EstablishmentService.data.establishments;
     $scope.getEstablishments = function(){
-        EstablishmentService.getHappyHours();
+        EstablishmentService.getHappyHours($scope.zipcode);
+        console.log($scope.zipcode);
         console.log($scope.establishments);
     };
 }]);
@@ -18,8 +19,10 @@ myApp.factory('EstablishmentService', ['$http', function($http){
         establishments : []         //array contains data object
     };
     return {
-        getHappyHours : function(){         //functioned designed to allow passing in of zipcode
-            return $http.get('/happyhour').then(function(response){      //retrieves establishments
+        getHappyHours : function(data){
+            console.log(data);          //functioned designed to allow passing in of zipcode
+            return $http.post('/happyhour/' + data).then(function(response){      //retrieves establishments
+                console.log(response);
                 return data.establishments = response.data;
                 console.log(establishments);
             })

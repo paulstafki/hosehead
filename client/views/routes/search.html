@@ -1,11 +1,9 @@
 <div>
-    <form action="/happyhour" method="get">
+    <form>
         <div>
             <label for="zipcode">zip code:</label>
-            <input type="text" name="zipcode" id="zipcode"/>
-        </div>
-        <div>
-            <button ng-click="getEstablishments()"><a href="#results">Button</a></button>
+            <input ng-model="zipcode" type="number" name="zipcode" id="zipcode"/>
+            <button ng-click="getEstablishments(zipcode)"><a href="#results">Button</a></button>
         </div>
     </form>
 
