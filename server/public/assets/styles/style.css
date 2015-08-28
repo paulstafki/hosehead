@@ -14,6 +14,10 @@ li {
     list-style-type: none;
 }
 
+p {
+    color: #FF0000;
+}
+
 .resultsDiv li, .resultsHeader li, .navBar li {
     display: inline;
 }
@@ -41,8 +45,4 @@ li {
 
 .navBar li {
     padding-left: 20px;
-}
-
-.loginFormDiv, .addhhFormDiv {
-    margin-top: 10px;
 }

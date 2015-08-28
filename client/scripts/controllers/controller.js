@@ -25,8 +25,7 @@ myApp.factory('EstablishmentService', ['$http', function($http){
             $http.post('/happyhour/' + param).then(function(response){      //retrieves establishments
                 //console.log(response);        console logs no longer needed
                 data.establishments = response.data;
-                //console.log(data.establishments);
-                //return data.establishments       doesn't need to return anything anymore
+                //response.redirect("/assets/views/routes/landing.html/#results");
             })
         },
         data : data

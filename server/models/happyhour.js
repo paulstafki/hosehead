@@ -6,7 +6,7 @@ var EstablishmentSchema = new Schema({
     phonenumber: { type: String, required: true },
     time: { type: String, required: true },
     deals: { type: String, required: true },
-    focus: { type: String, required: true },
+    focus: { type: String, required: false },
     address: { type: String, required: true },
     city: { type: String, required: true },
     zipcode: { type: Number, required: true },
