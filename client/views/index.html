@@ -4,28 +4,32 @@
     <title>Hosehead landing page</title>
     <script type="text/javascript" src="/vendors/angular/angular.min.js"></script>
     <script type="text/javascript" src="/assets/scripts/app.min.js"></script>
+    <link rel="stylesheet" href="/vendors/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/assets/styles/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Slackey|Ubuntu' rel='stylesheet' type='text/css'>
 </head>
 <body>
-    <div class="logodiv">
-        <p>Logo here large</p>
-    </div>
-    <h1>Hosehead</h1>
-    <div class="loginForm">
-        <form action="/" method="post">
-            <div>
-                <label for="username">Username(can be your email address):</label>
-                <input type="text" name="username" id="username"/>
-            </div>
-            <div>
-                <label for="password">Password:</label>
-                <input type="password" name="password" id="password"/>
-            </div>
-            <div class="loginFormButtons">
-                <input type="submit" value="Log In"/>
-                <a href="/assets/views/routes/register.html">Register</a>
-            </div>
-        </form>
+    <div class="moduleDiv">
+        <div class="logodiv">
+            <p>Logo here large</p>
+        </div>
+        <h1>HOSEHEAD</h1>
+        <div class="loginForm">
+            <form action="/" method="post">
+                <div class="loginFormDiv">
+                    <input type="text" name="username" id="username" class="inputWidth" placeholder="Username:"/>
+                </div>
+                <div class="loginFormDiv">
+                    <input type="password" name="password" id="password" class="inputWidth" placeholder="Password:"/>
+                </div>
+                <div class="loginFormDiv">
+                    <div class="loginFormButtons">
+                        <input type="submit" value="Log In"/>
+                        <button><a href="/assets/views/routes/register.html">Register</a></button>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
 </body>
 </html>

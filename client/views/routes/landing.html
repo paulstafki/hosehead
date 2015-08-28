@@ -2,12 +2,14 @@
 <html ng-app="myApp">
 <head lang="UTF-8">
     <title>User Homepage</title>
+    <link rel="stylesheet" href="/vendors/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/assets/styles/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Slackey|Ubuntu' rel='stylesheet' type='text/css'>
 </head>
 <body>
     <header>
-        <div class="navBar">
-            <ul>
+        <div class="topNav">
+            <ul class="navBar">
                 <li><a href="#search">SEARCH</a></li>
                 <li><a href="#addhh">ADD</a></li>
                 <li><a href="#results">RESULTS</a></li>
@@ -15,19 +17,16 @@
         </div>
         <hr>
     </header>
-    <div>
+    <div class="moduleDiv">
         <main ng-view></main>
     </div>
     <footer>
         <hr>
-        <ul>
-            <li></li>
-        </ul>
-
-        <ul>
-            <li>Email the admin</li>
-            <li><a href="https://www.linkedin.com/pub/paul-r-stafki/b8/54a/207">Site Admin linkedin</a></li>
-        </ul>
+        <div>
+            <ul class="footerNav">
+                <li><a href="https://www.linkedin.com/pub/paul-r-stafki/b8/54a/207">Linkedin</a></li>
+            </ul>
+        </div>
     </footer>
 <script type="text/javascript" src="/vendors/angular/angular.min.js"></script>
 <script type="text/javascript" src="/vendors/angular-route/angular-route.min.js"></script>

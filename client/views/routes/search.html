@@ -1,9 +1,11 @@
 <div>
+    <div class="well">
+        <h2>SEARCH FOR A DEAL:</h2>
+    </div>
     <form>
         <div>
-            <label for="zipcode">zip code:</label>
-            <input ng-model="zipcode" type="number" name="zipcode" id="zipcode"/>
-            <button ng-click="getEstablishments(zipcode)"><a href="#results">Button</a></button>
+            <input ng-model="zipcode" type="number" name="zipcode" id="zipcode" placeholder="Zip Code"/>
+            <button ng-click="getEstablishments(zipcode)"><a href="#results">Search</a></button>
         </div>
     </form>
 

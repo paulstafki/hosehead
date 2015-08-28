@@ -1,13 +1,31 @@
-<form action="/register" method="post">
-    <div>
-        <label for="username">Username:</label>
-        <input type="text" name="username" id="username"/>
+<!DOCTYPE html>
+<html>
+<head lang="UTF-8">
+    <title>Hosehead landing page</title>
+    <script type="text/javascript" src="/vendors/angular/angular.min.js"></script>
+    <script type="text/javascript" src="/assets/scripts/app.min.js"></script>
+    <link rel="stylesheet" href="/vendors/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/styles/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Slackey|Ubuntu' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <div class="moduleDiv">
+        <div class="well">
+            <h2>MAKE AN ACCOUNT:</h2>
+            <p>Free and Easy!</p>
+        </div>
+        <form action="/register" method="post">
+            <div>
+                <input type="text" name="username" id="username" class="inputWidth" placeholder="Username:"/>
+                <p>Can be your email address</p>
+            </div>
+            <div>
+                <input type="password" name="password" id="password" class="inputWidth" placeholder="Password:"/>
+            </div>
+            <div>
+                <input type="submit" value="Register"/>
+            </div>
+        </form>
     </div>
-    <div>
-        <label for="password">Password:</label>
-        <input type="password" name="password" id="password"/>
-    </div>
-    <div>
-        <input type="submit" value="Register"/>
-    </div>
-</form>
+</body>
+</html>

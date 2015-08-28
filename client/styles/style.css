@@ -2,16 +2,51 @@ body {
     background-color: #FFFFFF;
 }
 
+h1, h2 {
+    font-family: Slackey, Verdana, sans-serif;
+}
+
+h3, h4, h5, label, li, p, a, button {
+    font-family: Ubuntu, Verdana, sans-serif;
+}
+
 li {
     list-style-type: none;
 }
 
-.resultsDiv li, .resultsHeader li{
+.resultsDiv li, .resultsHeader li, .navBar li {
     display: inline;
 }
 
 .resultsHeader li {
-    font: 20px Serif;
-    text-decoration:underline;
+    font: bold 20px Serif;
 }
 
+.resultsHeader, .resultsDiv {
+    padding-left: 0px;
+}
+
+.topNav {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.moduleDiv {
+    text-align: center;
+}
+
+.navBar {
+    margin-right: 40px;
+}
+
+.navBar li {
+    padding-left: 20px;
+}
+
+.loginFormDiv, .addhhFormDiv {
+    margin-top: 10px;
+}
+
+.inputWidth {
+    width: 240px;
+}

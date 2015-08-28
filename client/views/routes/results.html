@@ -1,8 +1,8 @@
 <div>
     <div class="well">
-        <h1>Results:</h1>
+        <h2>RESULTS:</h2>
     </div>
-    <div class="container" class="well">
+    <div class="container">
         <div class="resultDiv" ng-repeat="note in establishments">
             <div ng-click="showDetails = ! showDetails">
                 <ul class="resultsHeader">
@@ -15,17 +15,17 @@
                     <li>Upvotes: {{note.upvotes}}, Downvotes: {{note.downvotes}}</li>
                 </ul>
                 <ul class="resultsDiv">
-                    <li class="left">{{note.phonenumber}}, </li>
-                    <li class="right">{{note.focus}}-focused</li>
+                    <li>{{note.phonenumber}}, </li>
+                    <li>{{note.focus}}-focused</li>
                 </ul>
-                <ul>
+                <ul class="resultsDiv">
                     <li>{{note.deals}}</li>
                 </ul>
-                <ul>
+                <ul class="resultsDiv">
                     <li>{{note.address}}</li>
                     <li>{{note.city}}, {{note.zipcode}}</li>
                 </ul>
-                <ul>
+                <ul class="resultsDiv">
                     <li>Added on: {{note.date}}</li>
                 </ul>
             </div>
