@@ -20,6 +20,12 @@ router.post("/happyhour/:zipcode", function(req, res, next){
     });
 });
 
+router.put("/flag/:id", function(req, res, next){
+    Establishment.findByIdAndUpdate(req.params.id, {task: req.body.task, flag: !req.body.flag}, function() {
+    });
+    res.send("Task complete!(zorg zorg)");
+});
+
 router.get("/", function(req,res,next){
     res.sendFile(path.resolve(__dirname, '../public/assets/views/index.html'));
 });

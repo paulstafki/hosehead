@@ -12,6 +12,18 @@ myApp.controller("EstablishmentController", ['$scope', '$http', 'EstablishmentSe
         console.log($scope.zipcode);
         //console.log($scope.establishments);
     };
+    $scope.reportFalse = function(note){        //PUT for flagging false HH info
+        $http({ url: '/flag/' + note._id,
+            method: 'PUT',
+            data: note,
+            headers: {"Content-Type": "application/json;charset=utf-8"}
+        }).then(function(res) {
+            alert("False information flagged - we'll get right on it, thank you!");
+        }, function(error) {
+            console.log(error);
+        });
+    };
+
 }]);
 
 myApp.factory('EstablishmentService', ['$http', function($http){
