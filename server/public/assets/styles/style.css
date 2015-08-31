@@ -46,3 +46,12 @@ p {
 .navBar li {
     padding-left: 20px;
 }
+
+.resultsDiv {
+    text-align: left;
+}
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
