@@ -7,12 +7,15 @@
             <div ng-click="showDetails = ! showDetails">
                 <ul class="resultsHeader">
                     <li class="left">{{note.name}}, </li>
-                    <li class="right">{{note.time}}</li>
+                    <li class="right">{{note.time}}, </li>
+                    <li><img src="../images/thumbsup.jpg" alt="Thumbs Up" height="16" width="16"> x {{note.upvotes}}</li>
+                    <li><img src="../images/thumbsdown.jpg" alt="Thumbs Down" height="16" width="16"> x {{note.downvotes}}</li>
                 </ul>
             </div>
             <div ng-show="showDetails">
                 <ul class="resultsDiv">
-                    <li>Upvotes: {{note.upvotes}}, Downvotes: {{note.downvotes}}</li>
+                    <li><button class="btn btn-success btn-sm" ng-click="upvote(note)">Upvote</button></li>
+                    <li><button class="btn btn-danger btn-sm" ng-click="downvote(note)">Downvote</button></li>
                 </ul>
                 <ul class="resultsDiv">
                     <li>{{note.phonenumber}}, </li>
@@ -21,7 +24,7 @@
                 <ul class="resultsDiv">
                     <li>{{note.deals}}</li>
                 </ul>
-                <button class="falseInfo" ng-click="reportFalse(note)">Report false info</button>
+                <button class="btn btn-warning btn-sm" ng-click="reportFalse(note)">Report false info</button>
                 <ul class="resultsDiv">
                     <li>{{note.address}}</li>
                     <li>{{note.city}}, {{note.zipcode}}</li>

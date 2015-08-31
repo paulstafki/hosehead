@@ -5,13 +5,6 @@ var path = require('path');
 var mongoose = require('mongoose');
 var Establishment = require('../models/happyhour');
 
-//router.get("/happyhour", function(req, res, next){
-//    return Establishment.find({}).exec(function(err, info){
-//        if (err) throw new Error(err);
-//        res.send(JSON.stringify(info));
-//    });
-//});
-
 router.post("/happyhour/:zipcode", function(req, res, next){
     return Establishment.find({zipcode: req.params.zipcode}).exec(function(err, info){
         if (err) throw new Error(err);
@@ -21,9 +14,21 @@ router.post("/happyhour/:zipcode", function(req, res, next){
 });
 
 router.put("/flag/:id", function(req, res, next){
-    Establishment.findByIdAndUpdate(req.params.id, {task: req.body.task, flag: !req.body.flag}, function() {
+    Establishment.findByIdAndUpdate(req.params.id, {flag: !req.body.flag}, function() {
     });
     res.send("Task complete!(zorg zorg)");
+});
+
+router.put("/upvote/:id", function(req, res, next){
+    Establishment.findByIdAndUpdate(req.params.id, {upvotes: req.body.upvotes}, function() {
+    });
+    res.send("upvotes posted +1!");
+});
+
+router.put("/downvote/:id", function(req, res, next){
+    Establishment.findByIdAndUpdate(req.params.id, {downvotes: req.body.downvotes}, function() {
+    });
+    res.send("downvotes posted +1!");
 });
 
 router.get("/", function(req,res,next){
