@@ -4,10 +4,17 @@ var passport = require('passport');
 var path = require('path');
 var mongoose = require('mongoose');
 var Establishment = require('../models/happyhour');
+var User = require('../models/user');
 
 router.get('/username', function(req, res, next){
-    console.log("Who dis?" + req.user);
     res.json(req.user);
+});
+
+router.put("/incUser/:id", function(req, res, next){
+    console.log(req);
+    User.findByIdAndUpdate(req.params.id, {useractivity: req.body.useractivity, rank: req.body.rank}, function() {
+    });
+    res.send("user activity +1'd!");
 });
 
 router.post("/happyhour/:zipcode", function(req, res, next){
