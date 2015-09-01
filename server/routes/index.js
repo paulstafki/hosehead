@@ -5,11 +5,15 @@ var path = require('path');
 var mongoose = require('mongoose');
 var Establishment = require('../models/happyhour');
 
+router.get('/username', function(req, res, next){
+    console.log("Who dis?" + req.user);
+    res.json(req.user);
+});
+
 router.post("/happyhour/:zipcode", function(req, res, next){
     return Establishment.find({zipcode: req.params.zipcode}).exec(function(err, info){
         if (err) throw new Error(err);
         res.send(JSON.stringify(info));
-        //res.redirect("/assets/views/routes/landing.html/#results");
     });
 });
 

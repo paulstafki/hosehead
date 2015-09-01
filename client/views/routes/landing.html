@@ -8,11 +8,14 @@
 </head>
 <body>
     <header>
-        <div class="topNav">
+        <div class="topNav" ng-controller="UserController">
             <ul class="navBar">
                 <li><a href="#search">SEARCH</a></li>
                 <li><a href="#addhh">ADD</a></li>
                 <li><a href="#results">RESULTS</a></li>
+            </ul>
+            <ul class="userBar">
+                <li>Welcome, hoser: {{displayedName}}</li>
             </ul>
         </div>
         <hr>

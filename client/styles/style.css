@@ -18,7 +18,7 @@ p {
     color: #FF0000;
 }
 
-.resultsDiv li, .resultsHeader li, .navBar li {
+.resultsDiv li, .resultsHeader li, .navBar li, .userBar li {
     display: inline;
 }
 
@@ -54,4 +54,8 @@ p {
 .col-centered{
     float: none;
     margin: 0 auto;
+}
+
+.userBar {
+    text-align: left;
 }

@@ -1,7 +1,23 @@
 myApp.controller('AddhappyhourController', ["$scope", function($scope){
-    //$scope.empAdded = {
-    //    value : 'NO'
-    //};
+
+}]);
+
+myApp.controller('UserController', ["$scope", '$http', function($scope, $http){
+    $scope.displayedName = "";
+    $scope.userOnLoad = function() {
+        $http({
+            url: "/username",
+            method: 'GET'
+        }).success(function (data) {
+            $scope.displayedName = data.username;
+        }).error(function () {
+            console.log("error");
+        });
+    };
+    $scope.userOnLoad();
+
+
+
 }]);
 
 myApp.controller("EstablishmentController", ['$scope', '$http', '$location', '$rootScope', 'EstablishmentService', function($scope, $http, $location, $rootScope, EstablishmentService){
