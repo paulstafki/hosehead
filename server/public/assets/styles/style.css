@@ -10,12 +10,18 @@ h3, h4, h5, label, li, p, a, button {
     font-family: Ubuntu, Verdana, sans-serif;
 }
 
+label {
+    font-size: 28px;
+}
+
 li {
     list-style-type: none;
+
 }
 
 p {
     color: #FF0000;
+    font-size: 20px;
 }
 
 .resultsDiv li, .resultsHeader li, .navBar li, .userBar li {
@@ -43,6 +49,10 @@ p {
     margin-right: 40px;
 }
 
+.navBar li, .footerNav li, .userBar li {
+    font-size: 28px;
+}
+
 .navBar li {
     padding-left: 20px;
 }
@@ -58,4 +68,8 @@ p {
 
 .userBar {
     text-align: left;
+}
+
+h1, h2 {
+    font-size: 72px;
 }
