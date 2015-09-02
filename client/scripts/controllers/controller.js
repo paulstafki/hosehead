@@ -1,5 +1,4 @@
 myApp.controller('AddhappyhourController', ["$scope", function($scope){
-
 }]);
 
 myApp.controller('UserController', ["$scope", '$http', function($scope, $http){
