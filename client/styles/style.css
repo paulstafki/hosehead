@@ -10,13 +10,8 @@ h3, h4, h5, label, li, p, a, button {
     font-family: Ubuntu, Verdana, sans-serif;
 }
 
-/*label {*/
-    /*font-size: 28px;*/
-/*}*/
-
 li {
     list-style-type: none;
-
 }
 
 p {
@@ -36,7 +31,7 @@ p {
 }
 
 .topNav {
-    margin-top: 20px;
+    margin-top: 10px;
     text-align: right;
 }
 
@@ -45,12 +40,8 @@ p {
 }
 
 .navBar {
-    margin-right: 40px;
+    margin-right: 20px;
 }
-
-/*.navBar li, .footerNav li, .userBar li {*/
-    /*font-size: 20px;*/
-/*}*/
 
 .navBar li {
     padding-left: 20px;
