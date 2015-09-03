@@ -28,9 +28,11 @@
     </div>
     <div class="addhhFormDiv form-group">
         <label class="control-label col-sm-2" for="focus">Focus: </label>
-        <div class="col-sm-offset+1 col-sm-9">
-            <input type="checkbox" class="input-lg" name="focus" id="focus" value="drink" checked> Drink
-            <input type="checkbox" class="input-lg" name="focus" value="food"> Food
+        <div class="col-sm-offset+1 col-sm-9 radioFocus">
+            <p>Drink-focused?</p>
+            <input type="radio" class="input-lg" name="focus" id="focus" value="drink" checked>
+            <p>Food-focused?</p>
+            <input type="radio" class="input" name="focus" value="food">
         </div>
     </div>
     <div class="addhhFormDiv form-group">
@@ -54,8 +56,9 @@
     <div class="addhhFormDiv form-group">
         <label class="control-label col-sm-2" for="empAdded">Employed Here?</label>
         <div class="col-sm-offset+1 col-sm-9">
-            <input type="checkbox" class="input-lg" name="empAdded" id="empAdded" value="false" ng-model="empAdded.value">
-            {{empAdded.value}}
+            <div class="radioFocus">
+                <input type="checkbox" class="input-lg" name="empAdded" id="empAdded" value="false" ng-model="empAdded.value">
+            </div>
             <hr>
             <div class="subform" ng-show="empAdded.value">
                 <div class="addhhFormDiv form-group">
