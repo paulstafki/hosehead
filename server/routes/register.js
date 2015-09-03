@@ -13,7 +13,7 @@ router.post('/', function(req,res,next) {
     console.log("post hit, new user created");
     Users.create(req.body, function (err, post) {
         if (err)
-            next(err);
+            res.send("Take off you knob, that username is taken! Click the back button to go back to the register page.");
         else
             res.redirect('/assets/views/index.html');
     })

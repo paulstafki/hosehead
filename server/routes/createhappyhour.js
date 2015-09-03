@@ -10,12 +10,12 @@ router.get('/', function(req, res, next){
 });
 
 router.post('/', function(req,res,next) {
-    console.log("post hit, new happy hour created");
     Establishment.create(req.body, function (err, post) {
         if (err)
-            next(err);
+            res.send("Brakes are gone, ain't no point in steering now?");
         else
-            res.redirect('/assets/views/routes/landing.html');
+            res.send("Happy hour created! Click the back button to be taken to your user page.");
+            //res.redirect('/assets/views/routes/landing.html');
     })
 });
 
