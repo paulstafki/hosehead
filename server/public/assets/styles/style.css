@@ -23,7 +23,8 @@ p {
 }
 
 .resultsHeader li {
-    font: bold 20px Serif;
+    font-weight: bold;
+    font-size:20px;
 }
 
 .resultsHeader, .resultsDiv {

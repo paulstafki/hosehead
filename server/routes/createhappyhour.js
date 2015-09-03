@@ -12,10 +12,10 @@ router.get('/', function(req, res, next){
 router.post('/', function(req,res,next) {
     Establishment.create(req.body, function (err, post) {
         if (err)
-            res.send("Brakes are gone, ain't no point in steering now?");
+            res.send("Brakes are gone, ain't no point in steering now.");
         else
             res.send("Happy hour created! Click the back button to be taken to your user page.");
-            //res.redirect('/assets/views/routes/landing.html');
+            //res.redirect('/assets/views/routes/landing.html');  Bad redirect took you to a fresh session
     })
 });
 
