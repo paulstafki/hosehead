@@ -6,12 +6,12 @@
         <div class="resultDiv" ng-repeat="note in establishments">
             <div ng-click="showDetails = ! showDetails">
                 <ul class="resultsHeader">
-                    <li class="left">{{note.name}}</li>
+                    <li class="left">{{note.name}}, </li>
                     <li><img src="../images/thumbsup.jpg" alt="Thumbs Up" height="16" width="16"> x {{note.upvotes}}</li>
                     <li><img src="../images/thumbsdown.jpg" alt="Thumbs Down" height="16" width="16"> x {{note.downvotes}}</li>
                 </ul>
             </div>
-            <div class="col-xs-9 col-sm-6 col-centered" ng-show="showDetails">
+            <div class="col-xs-9 col-sm-6 col-centered expandyDiv" ng-show="showDetails">
                 <ul class="resultsDiv">
                     <li><button class="btn btn-success btn-sm" ng-click="upvote(note)">Upvote</button></li>
                     <li><button class="btn btn-danger btn-sm" ng-click="downvote(note)">Downvote</button></li>

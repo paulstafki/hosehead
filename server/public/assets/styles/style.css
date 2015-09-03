@@ -1,5 +1,5 @@
 body {
-    background-color: #FFFFFF;
+    background-color: #333333;
 }
 
 h1, h2 {
@@ -8,6 +8,7 @@ h1, h2 {
 
 h3, h4, h5, label, li, p, a, button {
     font-family: Ubuntu, Verdana, sans-serif;
+    color: #DBDBDB;
 }
 
 li {
@@ -15,7 +16,7 @@ li {
 }
 
 p {
-    color: #FF0000;
+    color: #f2836b;
 }
 
 .resultsDiv li, .resultsHeader li, .navBar li, .userBar li {
@@ -59,4 +60,42 @@ p {
 
 .userBar {
     text-align: left;
+}
+
+.well {
+    background-color: #a9d1cc;
+}
+
+.expandyDiv {
+    border-color: #DBDBDB;
+    border-width: 1px;
+    border-style: solid;
+    background-color: #4f4f4f;
+    padding-top: 14px;
+    margin-bottom: 5px;
+}
+
+.topNav li, .topNav a, .footerNav li, .footerNav a {
+    color: #b7e2dd;
+}
+
+.searchy a {
+    color: #b7e2dd;
+}
+
+.userBar {
+    padding-left: 40px;
+}
+
+.userBar p {
+    color: #DBDBDB;
+}
+
+h1 {
+
+    color: #a9d1cc;
+}
+
+h3 {
+    color: #000000;
 }
