@@ -107,3 +107,8 @@ h3 {
 .radioFocus p {
     color: #DBDBDB;
 }
+
+.logoDiv {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
